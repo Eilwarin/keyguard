@@ -1,0 +1,5 @@
+/home/vaia/CLionProjects/PassKeep/cmake-build-debug/CMakeFiles/PassKeep.dir
+/home/vaia/CLionProjects/PassKeep/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/vaia/CLionProjects/PassKeep/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/vaia/CLionProjects/PassKeep/cmake-build-debug/CMakeFiles/PassKeep_autogen_timestamp_deps.dir
+/home/vaia/CLionProjects/PassKeep/cmake-build-debug/CMakeFiles/PassKeep_autogen.dir
