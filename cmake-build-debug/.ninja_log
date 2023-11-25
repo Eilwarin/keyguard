@@ -1,8 +1,10 @@
 # ninja log v5
-0	29	1700742063912723999	PassKeep_autogen/timestamp	7ab1936b050606b9
-0	29	1700742063912723999	PassKeep_autogen/mocs_compilation.cpp	7ab1936b050606b9
-0	29	1700742063912723999	/home/vaia/CLionProjects/PassKeep/cmake-build-debug/PassKeep_autogen/timestamp	7ab1936b050606b9
-0	29	1700742063912723999	/home/vaia/CLionProjects/PassKeep/cmake-build-debug/PassKeep_autogen/mocs_compilation.cpp	7ab1936b050606b9
-29	47	1700742063936057318	CMakeFiles/PassKeep.dir/PassKeep_autogen/mocs_compilation.cpp.o	9fa0291a7c35c98a
-29	1601	1700742065489389677	CMakeFiles/PassKeep.dir/main.cpp.o	9dd739ac625c5c2f
-1602	1909	1700742065792722821	PassKeep	8e698d342eaba68e
+1	8	1700880298234608034	PassKeep_autogen/mocs_compilation.cpp	7ab1936b050606b9
+9	1770	1700880299994542878	CMakeFiles/PassKeep.dir/NewKey.cpp.o	a1a5032f290e17b
+1	8	1700880298234608034	PassKeep_autogen/timestamp	7ab1936b050606b9
+1	81	1700881171569709237	build.ninja	d07481d2e7a1032b
+16	40	1700874239918954426	CMakeFiles/PassKeep.dir/PassKeep_autogen/mocs_compilation.cpp.o	9fa0291a7c35c98a
+1	8	1700880298234608034	/home/vaia/CLionProjects/PassKeep/cmake-build-debug/PassKeep_autogen/timestamp	7ab1936b050606b9
+1770	2035	1700880300257866485	PassKeep	6d0f74afb6b9b1b4
+1	8	1700880298234608034	/home/vaia/CLionProjects/PassKeep/cmake-build-debug/PassKeep_autogen/mocs_compilation.cpp	7ab1936b050606b9
+15	2308	1700879738906608440	CMakeFiles/PassKeep.dir/main.cpp.o	9dd739ac625c5c2f

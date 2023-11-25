@@ -13,7 +13,9 @@ find_package(Qt5 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(PassKeep main.cpp)
+add_executable(PassKeep main.cpp
+        NewKey.cpp
+        NewKey.h)
 target_link_libraries(PassKeep
         Qt5::Core
         Qt5::Gui

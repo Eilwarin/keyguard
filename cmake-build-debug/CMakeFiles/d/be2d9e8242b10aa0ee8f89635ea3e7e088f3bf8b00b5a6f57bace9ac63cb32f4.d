@@ -1,5 +1,7 @@
 PassKeep_autogen/timestamp: \
   /home/vaia/CLionProjects/PassKeep/CMakeLists.txt \
+  /home/vaia/CLionProjects/PassKeep/NewKey.cpp \
+  /home/vaia/CLionProjects/PassKeep/NewKey.h \
   CMakeFiles/3.26.4/CMakeCCompiler.cmake \
   CMakeFiles/3.26.4/CMakeCXXCompiler.cmake \
   CMakeFiles/3.26.4/CMakeSystem.cmake \
@@ -40,6 +42,10 @@ PassKeep_autogen/timestamp: \
   /usr/lib/cmake/Qt5Gui/Qt5Gui_QTsLibPlugin.cmake \
   /usr/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake \
   /usr/lib/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake \
+  /usr/lib/cmake/Qt5Gui/Qt5Gui_QWaylandEglPlatformIntegrationPlugin.cmake \
+  /usr/lib/cmake/Qt5Gui/Qt5Gui_QWaylandIntegrationPlugin.cmake \
+  /usr/lib/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeEglPlatformIntegrationPlugin.cmake \
+  /usr/lib/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeGlxPlatformIntegrationPlugin.cmake \
   /usr/lib/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake \
   /usr/lib/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake \
   /usr/lib/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake \
@@ -48,93 +54,19 @@ PassKeep_autogen/timestamp: \
   /usr/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake \
   /usr/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake \
   /usr/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompiler.cmake.in \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompiler.cmake.in \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCompilerIdDetection.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompileFeatures.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeFindBinUtils.cmake \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeParseArguments.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeParseImplicitIncludeInfo.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeParseImplicitLinkInfo.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeParseLibraryArchitecture.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystem.cmake.in \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCompilerCommon.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Borland-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Bruce-C-DetermineCompiler.cmake \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Clang-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Compaq-C-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Cray-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GHS-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-C-DetermineCompiler.cmake \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-FindBinUtils.cmake \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/HP-C-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/IAR-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Intel-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/LCC-C-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/PGI-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/SCO-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/SDCC-C-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/SunPro-C-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/TI-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Tasking-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/XL-C-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/XLClang-C-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/zOS-C-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/FeatureTesting.cmake \
-  /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-Determine-CXX.cmake \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU-C.cmake \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU-CXX.cmake \
   /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU.cmake \
