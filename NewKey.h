@@ -18,28 +18,28 @@
 #include <QRandomGenerator>
 #include <QFile>
 #include <QJsonArray>
+#include <QDate>
 
 class NewKey : public QWidget{
 
 
 public:
     explicit NewKey(QWidget *parent = nullptr);
+    QLineEdit *url;
+    QLineEdit *username;
+    QLineEdit *key;
 
 public slots:
-    void onButtonClick();
-    void onGenerateClick();
+    void onButtonClick() const;
+    void onGenerateClick() const;
     void onGoBack();
     void onShowKey();
-    void onCopyToClipboard();
+    void onCopyToClipboard() const;
 
 private:
     QLabel *urlLabel;
     QLabel *usernameLabel;
     QLabel *keyLabel;
-
-    QLineEdit *url;
-    QLineEdit *username;
-    QLineEdit *key;
 
     QPushButton *getTextFields;
     QPushButton *generateKey;

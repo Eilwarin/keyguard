@@ -1,7 +1,13 @@
 PassKeep_autogen/timestamp: \
   /home/vaia/CLionProjects/PassKeep/CMakeLists.txt \
+  /home/vaia/CLionProjects/PassKeep/Encryption.cpp \
+  /home/vaia/CLionProjects/PassKeep/Encryption.h \
+  /home/vaia/CLionProjects/PassKeep/Landing.cpp \
+  /home/vaia/CLionProjects/PassKeep/Landing.h \
   /home/vaia/CLionProjects/PassKeep/NewKey.cpp \
   /home/vaia/CLionProjects/PassKeep/NewKey.h \
+  /home/vaia/CLionProjects/PassKeep/OpenKeys.cpp \
+  /home/vaia/CLionProjects/PassKeep/OpenKeys.h \
   CMakeFiles/3.26.4/CMakeCCompiler.cmake \
   CMakeFiles/3.26.4/CMakeCXXCompiler.cmake \
   CMakeFiles/3.26.4/CMakeSystem.cmake \

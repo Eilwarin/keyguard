@@ -88,9 +88,27 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/vaia/CLionProjects/PassKeep/Encryption.h",
+			"MU",
+			"EWIEGA46WW/moc_Encryption.cpp",
+			null
+		],
+		[
+			"/home/vaia/CLionProjects/PassKeep/Landing.h",
+			"MU",
+			"EWIEGA46WW/moc_Landing.cpp",
+			null
+		],
+		[
 			"/home/vaia/CLionProjects/PassKeep/NewKey.h",
 			"MU",
 			"EWIEGA46WW/moc_NewKey.cpp",
+			null
+		],
+		[
+			"/home/vaia/CLionProjects/PassKeep/OpenKeys.h",
+			"MU",
+			"EWIEGA46WW/moc_OpenKeys.cpp",
 			null
 		]
 	],
@@ -144,7 +162,10 @@
 	"SETTINGS_FILE" : "/home/vaia/CLionProjects/PassKeep/cmake-build-debug/CMakeFiles/PassKeep_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/home/vaia/CLionProjects/PassKeep/Encryption.cpp", "MU", null ],
+		[ "/home/vaia/CLionProjects/PassKeep/Landing.cpp", "MU", null ],
 		[ "/home/vaia/CLionProjects/PassKeep/NewKey.cpp", "MU", null ],
+		[ "/home/vaia/CLionProjects/PassKeep/OpenKeys.cpp", "MU", null ],
 		[ "/home/vaia/CLionProjects/PassKeep/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

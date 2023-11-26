@@ -15,7 +15,13 @@ find_package(Qt5 COMPONENTS
 
 add_executable(PassKeep main.cpp
         NewKey.cpp
-        NewKey.h)
+        NewKey.h
+        OpenKeys.h
+        OpenKeys.cpp
+        Landing.cpp
+        Landing.h
+        Encryption.cpp
+        Encryption.h)
 target_link_libraries(PassKeep
         Qt5::Core
         Qt5::Gui

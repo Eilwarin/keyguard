@@ -55,7 +55,7 @@ NewKey::NewKey(QWidget *parent) : QWidget(parent){
     connect(showKeyButton, &QPushButton::clicked, this, &NewKey::onShowKey);
     connect(copyToClipboard, &QPushButton::clicked, this, &NewKey::onCopyToClipboard);
 }
-void NewKey::onButtonClick() {
+void NewKey::onButtonClick() const {
     QString usr_name = username->text();
     QString site_url = url->text();
     QString gen_key = key->text();
@@ -72,14 +72,17 @@ void NewKey::onButtonClick() {
     jsonObject["url"] = site_url;
     jsonObject["username"] = usr_name;
     jsonObject["key"] = gen_key;
+    jsonObject["dateModified"] = QDate::currentDate().toString("dd-MM-yyyy");
+    jsonObject["dateAccessed"] = QDate::currentDate().toString("dd-MM-yyyy");
 
-    QJsonArray jsonArray = jsonDocument.array();
+
+    QJsonArray jsonArray = jsonDocument.isArray() ? jsonDocument.array() : QJsonArray();
+
     jsonArray.append(jsonObject);
-
-    QJsonDocument arrayJsonDocument(jsonArray);
+    jsonDocument.setArray(jsonArray);
 
     if (file.open(QIODevice::WriteOnly)){
-        file.write(arrayJsonDocument.toJson());
+        file.write(jsonDocument.toJson());
         file.close();
     }
 
@@ -88,7 +91,7 @@ void NewKey::onButtonClick() {
     key->clear();
 }
 
-void NewKey::onGenerateClick() {
+void NewKey::onGenerateClick() const {
     QString generatedKey = onGenerateString();
     key->setText(generatedKey);
 }
@@ -126,7 +129,7 @@ void NewKey::onShowKey() {
     }
 }
 
-void NewKey::onCopyToClipboard() {
+void NewKey::onCopyToClipboard() const {
     // Copy the text from the key field to the clipboard
     QApplication::clipboard()->setText(key->text());
 }
