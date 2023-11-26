@@ -100,7 +100,6 @@ void OpenKeys::onImport() {
 
     updateLogin();
     loadLoginData(logins);
-
 }
 
 void OpenKeys::onSort(const QString &sort) {

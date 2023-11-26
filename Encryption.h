@@ -20,18 +20,18 @@
 class Encryption {
 public:
     Encryption();
-    static QString search(const QString &directory = QDir::currentPath());
-    static void onDecrypt(const QString&, const QString&);
-    static void onDecryptMaster(const QString&, const QString&);
-    static void onEncrypt(const QString&, const QString&);
-    static void onCreateMaster();
-    static void onSelectMaster();
-    static QJsonArray logins;
+     static QString search(const QString &directory = QDir::currentPath());
+     void onDecrypt(const QString&, const QString&);
+     void onDecryptMaster(const QString&, const QString&);
+     static void onEncrypt(const QString&, const QString&);
+     static void onCreateMaster();
+     void onEncryptLogin();
+     QJsonArray logins;
+     QFile *loginFile{};
+     QString loginKey;
 
-private:
-    static QString fileName;
-    static QString masterKey;
-    static QString loginKey;
+protected:
+    QString masterKey;
 };
 
 

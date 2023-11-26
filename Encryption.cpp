@@ -22,12 +22,12 @@ QString Encryption::search(const QString &directory){
 
 void Encryption::onDecryptMaster(const QString& key, const QString& filename) {
     QStringList arguments;
-    arguments << "decrypt" << QString(search()) << key;
+    arguments << "decrypt" << QDir::currentPath() + "/.master.key" << key;
 
     QProcess aesProcess;
-    aesProcess.start("python", QStringList() << QString(search()) << arguments);
+    aesProcess.start("python", QStringList() << QDir::currentPath() + "/.master.key" << arguments);
     aesProcess.waitForFinished(-1);
-    loginKey = aesProcess.readAllStandardOutput();
+    loginKey = QString(aesProcess.readAllStandardOutput());
 
     onDecrypt(loginKey, filename);
 }
@@ -41,10 +41,11 @@ void Encryption::onDecrypt(const QString &key, const QString &filename) {
     QJsonDocument jsonDocument = QJsonDocument::fromJson(loginData.toUtf8());
     if (jsonDocument.isArray()){
         logins = jsonDocument.array();
+        loginFile->setFileName(QDir::currentPath() + "/" + filename);
     }
 }
 
-void Encryption::onEncrypt(const QString& key, const QString& filename) {
+void Encryption::onEncrypt(const QString &key, const QString& filename) {
     QStringList arguments;
     arguments << "encrypt" << filename << key;
 
@@ -58,5 +59,12 @@ void Encryption::onCreateMaster() {
     if (masterFile.open(QIODevice::WriteOnly)){
         masterFile.close();
     }
-    onEncrypt(masterKey, QDir::currentPath() + "/.master.key");
+}
+
+void Encryption::onEncryptLogin() {
+    if (loginFile->exists() && loginFile->open(QIODevice::ReadOnly | QIODevice::Text)){
+        QString fileHash = QCryptographicHash::hash(QByteArray(loginFile->readAll()), QCryptographicHash::Sha256).toHex();
+        loginKey = QCryptographicHash::hash(QByteArray((masterKey + fileHash).toUtf8()), QCryptographicHash::Sha512);
+        onEncrypt(loginKey, loginFile->fileName());
+    }
 }

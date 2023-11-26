@@ -4,8 +4,10 @@
 
 #include <QCoreApplication>
 #include "NewKey.h"
+#include "Encryption.h"
 
 NewKey::NewKey(QWidget *parent) : QWidget(parent){
+    encryption = Encryption();
     setWindowTitle("New Login");
     setFixedSize(1280, 720);
 
@@ -59,13 +61,12 @@ void NewKey::onButtonClick() const {
     QString usr_name = username->text();
     QString site_url = url->text();
     QString gen_key = key->text();
-
-    QFile file("/home/vaia/CLionProjects/PassKeep/logins.json");
+    
     QJsonDocument jsonDocument;
 
-    if (file.exists() && file.open(QIODevice::ReadOnly)){
-        jsonDocument = QJsonDocument::fromJson(file.readAll());
-        file.close();
+    if (encryption.loginFile && encryption.loginFile->exists() && encryption.loginFile->open(QIODevice::ReadOnly)){
+        jsonDocument = QJsonDocument::fromJson(encryption.loginFile->readAll());
+        encryption.loginFile->close();
     }
 
     QJsonObject jsonObject;
@@ -81,9 +82,9 @@ void NewKey::onButtonClick() const {
     jsonArray.append(jsonObject);
     jsonDocument.setArray(jsonArray);
 
-    if (file.open(QIODevice::WriteOnly)){
-        file.write(jsonDocument.toJson());
-        file.close();
+    if (encryption.loginFile && encryption.loginFile->open(QIODevice::WriteOnly)){
+        encryption.loginFile->write(jsonDocument.toJson());
+        encryption.loginFile->close();
     }
 
     url->clear();
@@ -109,9 +110,9 @@ QString NewKey::onGenerateString() {
 void NewKey::onGoBack() {
     // Destroy the current main window
     close();
-
-    // Re-instantiate the main window
-    QCoreApplication::exit(773);  // Use a specific exit code to indicate re-instantiation
+    
+    auto *landing = new Landing();
+    landing->show();
 }
 
 void NewKey::onShowKey() {

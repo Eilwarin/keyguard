@@ -19,8 +19,10 @@
 #include <QFile>
 #include <QJsonArray>
 #include <QDate>
+#include "Landing.h"
+#include "Encryption.h"
 
-class NewKey : public QWidget{
+class NewKey : public QWidget, public Encryption{
 
 
 public:
@@ -48,6 +50,7 @@ private:
     QPushButton *copyToClipboard;
     bool showing = false;
     static QString onGenerateString();
+    Encryption encryption;
 };
 
 
