@@ -51,7 +51,7 @@ void Landing::onOpenButtonClick() {
 
     // Create a new instance of NewKey
     auto *openKeys = new OpenKeys();
-    openKeys->loadLoginData(logins);
+    openKeys->loadLoginData(QFile(QDir::currentPath() + "/.logins.json"));
     openKeys->show();
 }
 

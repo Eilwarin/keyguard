@@ -2,12 +2,9 @@
 // Created by vaia on 11/23/23.
 //
 
-#include <QCoreApplication>
 #include "NewKey.h"
-#include "Encryption.h"
 
 NewKey::NewKey(QWidget *parent) : QWidget(parent){
-    encryption = Encryption();
     setWindowTitle("New Login");
     setFixedSize(1280, 720);
 
@@ -61,12 +58,18 @@ void NewKey::onButtonClick() const {
     QString usr_name = username->text();
     QString site_url = url->text();
     QString gen_key = key->text();
-    
-    QJsonDocument jsonDocument;
 
-    if (encryption.loginFile && encryption.loginFile->exists() && encryption.loginFile->open(QIODevice::ReadOnly)){
-        jsonDocument = QJsonDocument::fromJson(encryption.loginFile->readAll());
-        encryption.loginFile->close();
+    QFile logins(QDir::currentPath() + "/.logins.json");
+    QJsonDocument jsonDocument;
+    QJsonArray jsonArray;
+
+    if (logins.exists() && logins.open(QIODevice::ReadOnly)) {
+        jsonDocument = QJsonDocument::fromJson(logins.readAll());
+        logins.close();
+
+        if (jsonDocument.isArray()) {
+            jsonArray = jsonDocument.array();
+        }
     }
 
     QJsonObject jsonObject;
@@ -76,15 +79,13 @@ void NewKey::onButtonClick() const {
     jsonObject["dateModified"] = QDate::currentDate().toString("dd-MM-yyyy");
     jsonObject["dateAccessed"] = QDate::currentDate().toString("dd-MM-yyyy");
 
-
-    QJsonArray jsonArray = jsonDocument.isArray() ? jsonDocument.array() : QJsonArray();
-
     jsonArray.append(jsonObject);
+
     jsonDocument.setArray(jsonArray);
 
-    if (encryption.loginFile && encryption.loginFile->open(QIODevice::WriteOnly)){
-        encryption.loginFile->write(jsonDocument.toJson());
-        encryption.loginFile->close();
+    if (logins.open(QIODevice::WriteOnly)) {
+        logins.write(jsonDocument.toJson());
+        logins.close();
     }
 
     url->clear();

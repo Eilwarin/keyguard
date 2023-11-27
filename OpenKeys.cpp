@@ -31,6 +31,7 @@ OpenKeys::OpenKeys(QWidget *parent) : QWidget(parent), Encryption() {
     backButton = new QPushButton(this);  // New back button
     backButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/back.png"));
     backButton->setIconSize(QSize(24, 24));
+    connect(backButton, &QPushButton::clicked, this, &OpenKeys::onGoBack);
     importButton = new QPushButton(this); // New import button
     importButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/import.png"));
     importButton->setIconSize(QSize(24, 24));
@@ -75,6 +76,13 @@ void OpenKeys::onEdit(int row) {
     }
 }
 
+void OpenKeys::onGoBack() {
+    // Destroy the current main window
+    close();
+
+    auto *landing = new Landing();
+    landing->show();
+}
 void OpenKeys::onImport() {
     auto filePath = QFileDialog::getOpenFileName(this, tr("Select JSON File"), "", tr("JSON Files (*.json)"));
 
@@ -99,7 +107,7 @@ void OpenKeys::onImport() {
     dataArray += importedArray;
 
     updateLogin();
-    loadLoginData(logins);
+    loadLoginData(QFile(QDir::currentPath() + "/.logins.json"));
 }
 
 void OpenKeys::onSort(const QString &sort) {
@@ -192,16 +200,24 @@ void OpenKeys::populateTable() {
     }
 }
 
-void OpenKeys::loadLoginData(const QJsonArray &loginData) {
+void OpenKeys::loadLoginData(QFile logins) {
     int totalLogins;
 
-        totalLogins = loginData.size();
+    QJsonDocument jsonDocument;
+    if (logins.open(QIODevice::ReadOnly | QIODevice::Text)){
+        QByteArray jsonData = logins.readAll();
+        jsonDocument = QJsonDocument::fromJson(jsonData);
+        logins.close();
+    }
+    QJsonArray loginData = jsonDocument.isArray() ? jsonDocument.array() : QJsonArray();
 
-        if (!loginData.isEmpty()){
-            dataArray = loginData;
-            loginCount->setText(QString::number(totalLogins) + " logins");
-            populateTable();
-        }
+    totalLogins = loginData.size();
+
+    if (!loginData.isEmpty()){
+        dataArray = loginData;
+        loginCount->setText(QString::number(totalLogins) + " logins");
+        populateTable();
+    }
 }
 void OpenKeys::onCopy(int row) {
     if (loginTable->item(row, 2)){
@@ -210,11 +226,11 @@ void OpenKeys::onCopy(int row) {
         jsonObject["dateAccessed"] = QDate::currentDate().toString("dd-MM-yyyy");
         dataArray[row] = jsonObject;
         updateLogin();
-        loadLoginData(logins);
+        loadLoginData(QFile(QDir::currentPath() + "/.logins.json"));
     }
 }
 void OpenKeys::updateLogin() {
-    QFile file("/home/vaia/CLionProjects/PassKeep/logins.json");
+    QFile file(QDir::currentPath() + "/.logins.json");
     if (file.open(QIODevice::WriteOnly | QIODevice::Text)){
         QJsonDocument updated(dataArray);
         file.write(updated.toJson());

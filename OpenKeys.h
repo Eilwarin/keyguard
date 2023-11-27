@@ -14,7 +14,6 @@
 #include <QPushButton>
 #include <QJsonDocument>
 #include <QJsonObject>
-#include <QCryptographicHash>
 #include <QRandomGenerator>
 #include <QFile>
 #include <QJsonArray>
@@ -31,7 +30,7 @@
 class OpenKeys : public QWidget, public Encryption{
 public:
     explicit OpenKeys(QWidget *parent = nullptr);
-    void loadLoginData(const QJsonArray &loginData);
+    void loadLoginData(QFile);
     void updateLogin();
 
 public slots:
@@ -41,6 +40,7 @@ public slots:
     void onSearch();
     void onCopy(int);
     void onDelete(int);
+    void onGoBack();
 
 private:
     QLabel *sortLabel;

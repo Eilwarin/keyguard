@@ -50,7 +50,6 @@ private:
     QPushButton *copyToClipboard;
     bool showing = false;
     static QString onGenerateString();
-    Encryption encryption;
 };
 
 
