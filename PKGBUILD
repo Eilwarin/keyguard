@@ -1,7 +1,7 @@
  #PKGBUILD
 
  pkgname=passkeep
- pkgver=main
+ pkgver=v0.1
  pkgrel=1
  pkgdesc="A simple C++ password manager."
  arch=('x86_64')
@@ -9,9 +9,9 @@
  license=('GPL')
  depends=('qt5-base')
 
-source=("passkeep-main.tar.gz::https://gitlab.com/use-cases1/passkeep/-/archive/main/passkeep-main.tar.gz")
+source=("${pkgname}-${pkgver}.tar.gz::https://gitlab.com/use-cases1/passkeep/-/archive/v0.1/${pkgname}-v0.1.tar.gz")")
 
 package() {
-  cd "${pkgname}-${pkgver}"
-  make INSTALL_ROOT="${pkgdir}" install
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  ./cmake-build-debug/PassKeep
 }
