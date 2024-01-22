@@ -29,15 +29,15 @@ OpenKeys::OpenKeys(QWidget *parent) : QWidget(parent), Encryption() {
         onSort(sortField->currentText());
     });
     backButton = new QPushButton(this);  // New back button
-    backButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/back.png"));
+    backButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/back.png"));
     backButton->setIconSize(QSize(24, 24));
     connect(backButton, &QPushButton::clicked, this, &OpenKeys::onGoBack);
     importButton = new QPushButton(this); // New import button
-    importButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/import.png"));
+    importButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/import.png"));
     importButton->setIconSize(QSize(24, 24));
     connect(importButton, &QPushButton::clicked, this, &OpenKeys::onImport);
     searchButton = new QPushButton(this);
-    searchButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/search.png"));
+    searchButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/search.png"));
     searchButton->setIconSize(QSize(16, 16));
     connect(searchButton, &QPushButton::clicked, this, &OpenKeys::onSearch);
     loginTable = new QTableWidget(this);
@@ -181,19 +181,19 @@ void OpenKeys::populateTable() {
 
         // Add a button in the sixth column
         auto *button = new QPushButton(this);
-        button->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/compose.png"));
+        button->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/compose.png"));
         button->setIconSize(QSize(16, 16));
         connect(button, &QPushButton::clicked, [this, i]() { onEdit(i); });
         loginTable->setCellWidget(i, 5, button);
 
         auto *copyButton = new QPushButton(this);
-        copyButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/copy.png"));
+        copyButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/copy.png"));
         copyButton->setIconSize(QSize(16, 16));
         connect(copyButton, &QPushButton::clicked, [this, i]() {onCopy(i);});
         loginTable->setCellWidget(i, 6, copyButton);
 
         auto *deleteButton = new QPushButton(this);
-        deleteButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/delete.png"));
+        deleteButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/delete.png"));
         deleteButton->setIconSize(QSize(16, 16));
         connect(deleteButton, &QPushButton::clicked, [this, i]() { onDelete(i);});
         loginTable->setCellWidget(i, 7, deleteButton);

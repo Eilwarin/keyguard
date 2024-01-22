@@ -22,16 +22,16 @@ NewKey::NewKey(QWidget *parent) : QWidget(parent){
 
     getTextFields = new QPushButton("Save", this);
     generateKey = new QPushButton(this);
-    generateKey->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/generate.png"));
+    generateKey->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/generate.png"));
     generateKey->setIconSize(QSize(16, 16));
     backButton = new QPushButton(this);  // New back button
-    backButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/back.png"));
+    backButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/back.png"));
     backButton->setIconSize(QSize(24, 24));
     showKeyButton = new QPushButton(this);
-    showKeyButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/show.png"));
+    showKeyButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/show.png"));
     showKeyButton->setIconSize(QSize(16, 16));
     copyToClipboard = new QPushButton(this);
-    copyToClipboard->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/copy.png"));
+    copyToClipboard->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/copy.png"));
     copyToClipboard->setIconSize(QSize(16, 16));
 
     auto *layout = new QGridLayout(this);
@@ -118,11 +118,11 @@ void NewKey::onGoBack() {
 
 void NewKey::onShowKey() {
     if (!showing){
-        showKeyButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/hide.png"));
+        showKeyButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/hide.png"));
         key->setEchoMode(QLineEdit::Normal);
     } else{
         key->setEchoMode(QLineEdit::Password);
-        showKeyButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/show.png"));
+        showKeyButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/show.png"));
     }
     if (!showing){
         showing = true;

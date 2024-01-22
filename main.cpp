@@ -49,7 +49,7 @@ public:
         master = new QLineEdit(this);
         master->setEchoMode(QLineEdit::Password);
         decrypt = new QPushButton(this);
-        decrypt->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/unlock.png"));
+        decrypt->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/unlock.png"));
         decrypt->setIconSize(QSize(24, 24));
         connect(decrypt, &QPushButton::clicked, [this]() {
             encryption.loginKey = QCryptographicHash::hash(QString(master->text()).toUtf8(), QCryptographicHash::Sha512).toHex();
@@ -82,20 +82,20 @@ private slots:
         repeatMaster = new QLineEdit(this);
         repeatMaster->setEchoMode(QLineEdit::Password);
         generateMaster = new QPushButton(this);
-        generateMaster->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/generate.png"));
+        generateMaster->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/generate.png"));
         generateMaster->setIconSize(QSize(16, 16));
         submitMaster = new QPushButton("Create", this);
         copyToClipboard = new QPushButton(this);
-        copyToClipboard->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/copy.png"));
+        copyToClipboard->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/copy.png"));
         copyToClipboard->setIconSize(QSize(16, 16));
 
         auto *newLayout = new QGridLayout(this);
-        newLayout->addWidget(enterMaster, 1, 2, 8, 12, Qt::AlignCenter);
-        newLayout->addWidget(newMaster, 2, 2, 8, 12, Qt::AlignCenter);
-        newLayout->addWidget(repeatMaster, 3, 2, 8, 12, Qt::AlignCenter);
-        newLayout->addWidget(generateMaster, 2, 4, 8, 11, Qt::AlignCenter);
-        newLayout->addWidget(copyToClipboard, 2, 4, 8, 12, Qt::AlignCenter);
-        newLayout->addWidget(submitMaster, 4, 2, 8, 12, Qt::AlignCenter);
+        newLayout->addWidget(enterMaster, 1, 3, 8, 12, Qt::AlignCenter);
+        newLayout->addWidget(newMaster, 2, 3, 8, 12, Qt::AlignCenter);
+        newLayout->addWidget(repeatMaster, 3, 3, 8, 12, Qt::AlignCenter);
+        newLayout->addWidget(generateMaster, 2, 4, 8, 12, Qt::AlignCenter);
+        newLayout->addWidget(copyToClipboard, 2, 4, 8, 13, Qt::AlignCenter);
+        newLayout->addWidget(submitMaster, 4, 3, 8, 12, Qt::AlignCenter);
 
         connect(submitMaster, &QPushButton::clicked, [this]() {
             encryption.loginKey = QCryptographicHash::hash(QString(repeatMaster->text()).toUtf8(), QCryptographicHash::Sha512).toHex();
@@ -141,6 +141,8 @@ private:
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
+
+    QApplication::setWindowIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/icon.png"));
 
     // Create an instance of the Encryption class
     Encryption encryption;

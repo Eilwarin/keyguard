@@ -10,9 +10,9 @@ Landing::Landing(QWidget *parent) : QWidget(parent), Encryption() {
     addLabel = new QLabel("New", this);
     openLabel = new QLabel("Open", this);
 
-    addButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/add.png"));
+    addButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/add.png"));
     addButton->setIconSize(QSize(64, 64));
-    openButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/folder.png"));
+    openButton->setIcon(QIcon("/home/vaia/CLionProjects/PassKeep/.icons/folder.png"));
     openButton->setIconSize(QSize(64, 64));
 
 
